@@ -26,3 +26,7 @@ h1, h2, h3 {
 .cards {
   font-size: 1000%;
 }
+
+.startGame {
+  margin-top: 20px;
+}
