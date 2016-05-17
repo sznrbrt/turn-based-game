@@ -1,0 +1,28 @@
+.card {
+  height: 180px;
+  width: 100px;
+  border: 1px solid black;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+.facevalue {
+  margin-left: 3px;
+}
+
+.cardColor {
+  font-size: 900%;
+}
+
+.playingCard {
+  margin: 10px 5px;
+  height: 150px;
+}
+
+.cards {
+  font-size: 1000%;
+}

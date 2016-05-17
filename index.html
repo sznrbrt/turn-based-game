@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Poker</title>
+	<link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/css/style.css">
+	<script src="/bower_components/angular/angular.min.js"></script>
+	<script src="/bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+	<script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+	<script src="/bower_components/angular-route/angular-route.js"></script>
+	<script src="/bower_components/socket.io-client/socket.io.js"></script>
+	<script src="/bower_components/angular-socket-io/socket.js"></script>
+	<script src="/js/module.js"></script>
+	<script src="/js/controllers.js"></script>
+	<script src="/js/factories.js"></script>
+</head>
+<body ng-app='pokerApp' ng-controller='mainCtrl'>
+	<div class="container">
+		<h1>Welcome to Poker</h1>
+
+		<h4>There are {{playerNum}} out of 10 possible players in the room.</h4>
+		<h4>Click Deal to start the game.</h4>
+
+		<button class="btn btn-info btn-sm" ng-click='startGame()' ng-if="!gameStarted">Start Game</button>
+		<button class="btn btn-success btn-sm" ng-click='dealMe()' ng-if="gameStarted && !myHand">Deal Me!</button>
+		<div class="row cards">
+			<span ng-repeat="card in cardsForDisplay" ng-bind-html="card|html"></span>
+		</div>
+	</div>
+</body>
+</html>
